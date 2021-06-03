@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datatable - Voler Admin Dashboard</title>
+    
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    
+<link rel="stylesheet" href="assets/vendors/simple-datatables/style.css">
+
+    <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon">
+</head>
+<body>
+    <div id="app">
+        <div class="navbar">
+             <nav class="navbar navbar-header fixed-top navbar-expand navbar-light bg-light ml-auto">
+                 <a class="navbar-brand" href="index.html"><img src="assets/images/cimory-logo.png"></a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav d-flex align-items-center navbar-light ml-auto">
+                        <li class="dropdown">
+                            <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+                                <div class="avatar mr-1">
+                                    <img src="assets/images/avatar/avatar-s-1.png" alt="" srcset="">
+                                </div>
+                                <div class="d-none d-md-block d-lg-inline-block">Hi, Saugi</div>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" href="#"><i data-feather="user"></i> Account</a>
+                                <a class="dropdown-item active" href="#"><i data-feather="mail"></i> Messages</a>
+                                <a class="dropdown-item" href="#"><i data-feather="settings"></i> Settings</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#"><i data-feather="log-out"></i> Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div id="sidebar" class='active'>
+            <div class="sidebar-wrapper active">
+    <!-- <div class="sidebar-header">
+        <img src="assets/images/cimory-logo.png" alt="" srcset="">
+    </div> -->
+    <div class="sidebar-menu">
+        <ul class="menu">
+                <li class="sidebar-item  ">
+                    <a href="index.html" class='sidebar-link'>
+                       <img src="assets/images/dashboard-icon.png">
+                        <span>Dashboard</span>
+                    </a>
+                    
+                </li>
+            
+            
+            
+                <li class='sidebar-title'>MANAGEMENT</li>
+
+                
+                  <li class="sidebar-item  ">
+                        <a href="data-user.html" class='sidebar-link'>
+                            <img src="assets/images/masterdata-icon.png">
+                            <span>Master Data</span>
+                        </a>
+                 </li>
+
+        
+                <li class="sidebar-item active ">
+                    <a href="stock-barang.html" class='sidebar-link'>
+                        <img src="assets/images/stock-barang-icon.png">
+                        <span>Stock Barang</span>
+                    </a>
+                    
+                </li>
+
+                 <li class="sidebar-item">
+                    <a href="sales-inquiry.html" class='sidebar-link'>
+                         <img src="assets/images/sales-data-icon.png"> 
+                        <span>Sales Data</span>
+                    </a>
+                    
+                </li>
+
+                 <li class="sidebar-item  ">
+                    <a href="faktur-penjualan.html" class='sidebar-link'>
+                         <img src="assets/images/faktur-penjualan-icon.png"> 
+                        <span>Faktur Penjualan</span>
+                    </a>
+                    
+                </li>
+
+                 <li class="sidebar-item  ">
+                        <a href="laporan-penjualan.html" class='sidebar-link'>
+                             <img src="assets/images/laporan-penjualan-icon.png"> 
+                            <span>Laporan Penjualan</span>
+                        </a>
+                        
+                    </li>
+
+                    <li class="sidebar-item  ">
+                        <a href="customer-complain.html" class='sidebar-link'>
+                              <img src="assets/images/complain-icon.png">
+                            <span>Customer Complain</span>
+                        </a>
+                        
+                    </li>
+        </ul>
+    </div>
+    <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+</div>
+        </div>
+        <div id="main">
+            
+<div class="main-content container-fluid">
+    <div class="page-title">
+        <div class="row">
+            <div class="col-12 col-md-6 order-md-1 order-last">
+                <h3>Stock Barang</h3>
+            </div>
+    </div>
+    <section class="section">
+        <div class="card mt-3">
+            <div class="card-body">
+                <div class="d-flex title-section">
+                    <div>
+                        <img src="assets/images/stock-barang-icon2.png"/>
+                    </div>
+                    <div>
+                        <h5>Stock Barang</h5>
+                     </div>
+                </div>
+               <table class='table table-striped' id="table1">
+                    <thead>
+                        <tr>
+                            <th class="text-center">No</th>
+                            <th class="text-center">Item</th>
+                            <th class="text-center">Deskripsi</th>
+                            <th class="text-center">Qty</th>
+                            <th class="text-center">Harga Satuan</th>
+                            <th class="text-center">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Item_1</td>
+                            <td>Deskripsi_1</td>
+                            <td>30</td>
+                            <td>
+                                Harga_1
+                            </td>
+                            <td>
+                                Total_1
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Item_1</td>
+                            <td>Deskripsi_2</td>
+                            <td>100</td>
+                            <td>
+                                Rp 5.000
+                            </td>
+                            <td>
+                                Total_2
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>produksi</td>
+                            <td>produksi@cimory.com</td>
+                            <td>Grumo Appula</td>
+                            <td>
+                                Rp 5.000
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>sales_market</td>
+                            <td>sm@cimory.com</td>
+                            <td>100</td>
+                            <td>
+                                  Rp 5.000
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>purchasing</td>
+                            <td>purchasing@cimory.com</td>
+                            <td>Patna</td>
+                            <td>
+                                 Rp 5.000
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>hrd</td>
+                            <td>hrd@cimory.com</td>
+                            <td>Mold</td>
+                            <td>
+                                Rp 5.000
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>finance</td>
+                            <td>finance@cimory.com</td>
+                            <td>Marlborough</td>
+                            <td>
+                                 Rp 5.000
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>admin</td>
+                            <td>admin@cimory.com</td>
+                            <td>Offenburg</td>
+                            <td>
+                                 Rp 5.000
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Duis.a.mi@sociisnatoquepenatibus.com</td>
+                            <td>07740 599321</td>
+                            <td>Karapınar</td>
+                            <td>
+                                  Rp 5.000
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>tempor.bibendum.Donec@ornarelectusante.ca</td>
+                            <td>0845 46 49</td>
+                            <td>Warrnambool</td>
+                            <td>
+                                  Rp 5.000
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>sem.ut@pellentesqueafacilisis.ca</td>
+                            <td>0800 1111</td>
+                            <td>Bothey</td>
+                            <td>
+                                 Rp 5.000
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>non@quisturpisvitae.ca</td>
+                            <td>07624 944915</td>
+                            <td>Shikarpur</td>
+                            <td>
+                                  Rp 5.000
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>molestie.dapibus@condimentumDonecat.edu</td>
+                            <td>0800 200103</td>
+                            <td>Assen</td>
+                            <td>
+                                 Rp 5.000
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>placerat.eget@sagittislobortis.edu</td>
+                            <td>(0112) 896 6829</td>
+                            <td>Hofors</td>
+                            <td>
+                                 Rp 5.000
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>diam@dapibus.org</td>
+                            <td>0334 836 4028</td>
+                            <td>Thane</td>
+                            <td>
+                                  Rp 5.000
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>urna.justo.faucibus@orci.com</td>
+                            <td>07079 826350</td>
+                            <td>Biez</td>
+                            <td>
+                                 Rp 5.000
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td>velit.Aliquam.nisl@sitametrisus.com</td>
+                            <td>0800 1111</td>
+                            <td>Olivar</td>
+                            <td>
+                                 Rp 5.000
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                            <td>fringilla.porttitor.vulputate@taciti.edu</td>
+                            <td>(0101) 043 2822</td>
+                            <td>Sanquhar</td>
+                            <td>
+                                  Rp 5.000
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                            <td>turpis@euenimEtiam.org</td>
+                            <td>0500 571108</td>
+                            <td>Okara</td>
+                            <td>
+                                  Rp 5.000
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td>feugiat@urnajustofaucibus.co.uk</td>
+                            <td>07624 682306</td>
+                            <td>La Cisterna</td>
+                            <td>
+                                  Rp 5.000
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>21</td>
+                            <td>elit.Etiam.laoreet@luctuslobortisClass.edu</td>
+                            <td>07624 869434</td>
+                            <td>100</td>
+                            <td>
+                                  Rp 5.000
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>22</td>
+                            <td>blandit.enim.consequat@mollislectuspede.net</td>
+                            <td>0800 1111</td>
+                            <td>100</td>
+                            <td>
+                                Rp 5.000
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>23</td>
+                            <td>mauris@diam.org</td>
+                            <td>0800 256 8788</td>
+                            <td>100</td>
+                            <td>
+                                 Rp 5.000
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>24</td>
+                            <td>Lorem.ipsum.dolor@etnetuset.com</td>
+                            <td>0800 1111</td>
+                            <td>100</td>
+                            <td>
+                                 Rp 5.000
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>eget.lacus.Mauris@feugiatSednec.org</td>
+                            <td>(016977) 8208</td>
+                            <td>100</td>
+                            <td>
+                                  Rp 5.000
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </section>
+</div>
+
+        </div>
+    </div>
+    <script src="assets/js/feather-icons/feather.min.js"></script>
+    <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    
+<script src="assets/vendors/simple-datatables/simple-datatables.js"></script>
+<script src="assets/js/vendors.js"></script>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
