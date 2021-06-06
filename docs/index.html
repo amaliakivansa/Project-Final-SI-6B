@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Voler Admin Dashboard</title>
+    
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/vendors/chartjs/Chart.min.css">
+
+    <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <div class="navbar">
+             <nav class="navbar navbar-header fixed-top navbar-expand navbar-light bg-light ml-auto">
+                 <a class="navbar-brand" href="index.html"><img src="assets/images/cimory-logo.png"></a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav d-flex align-items-center navbar-light ml-auto">
+                        <li class="dropdown">
+                            <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+                                <div class="avatar mr-1">
+                                    <img src="assets/images/avatar/avatar-s-1.png" alt="" srcset="">
+                                </div>
+                                <div class="d-none d-md-block d-lg-inline-block">Hi, Saugi</div>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" href="#"><i data-feather="user"></i> Account</a>
+                                <a class="dropdown-item active" href="#"><i data-feather="mail"></i> Messages</a>
+                                <a class="dropdown-item" href="#"><i data-feather="settings"></i> Settings</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#"><i data-feather="log-out"></i> Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div id="sidebar" class='active'>
+            <div class="sidebar-wrapper active cimory-sidebary">
+        <!-- <div class="sidebar-header">
+            <img src="assets/images/cimory-logo.png" alt="" srcset="">
+        </div> -->
+        <div class="sidebar-menu">
+            <ul class="menu">
+                
+                    <!-- <li class='sidebar-title'>Main Menu</li> -->
+                
+                    <li class="sidebar-item active ">
+                        <a href="index.html" class='sidebar-link' style="color: white;">
+                            <img src="assets/images/dashboard-icon.png">
+                            <!-- <i data-feather="home" width="20"></i>  -->
+                            <span>Dashboard</span>
+                        </a>
+                        
+                    </li>
+
+                    <li class='sidebar-title'>MANAGEMENT</li>
+
+                     <li class="sidebar-item  ">
+                        <a href="data-user.html" class='sidebar-link'>
+                            <img src="assets/images/masterdata-icon.png">
+                            <span>Data User</span>
+                        </a>
+                        
+                    </li>
+
+                
+                
+                
+                     <li class="sidebar-item">
+                       <a href="list-of-materials.html" class='sidebar-link'>
+                        <img src="assets/images/list-of-material-icon.png">
+                        <span>List of Materials</span>
+                    </a>
+                    
+                    </li>
+
+                     <li class="sidebar-item">
+                        <a href="stock-bahan-baku.html" class='sidebar-link'>
+                         <img src="assets/images/data-stock-icon.png"> 
+                        <span>Data Stock</span>
+                    </a>
+                    
+                     </li>
+
+                      <li class="sidebar-item  ">
+                        <a href="faktur-penjualan.html" class='sidebar-link'>
+                              <img src="assets/images/purchase-icon.png"> 
+                            <span>Purchase Request</span>
+                        </a>
+                    
+                    </li>
+
+                    <li class="sidebar-item  ">
+                        <a href="laporan-penjualan.html" class='sidebar-link'>
+                             <img src="assets/images/pengeluaran-icon.png"> 
+                            <span>Pemasukan Inventory</span>
+                        </a>
+                        
+                    </li>
+
+                    <li class="sidebar-item  ">
+                        <a href="customer-complain.html" class='sidebar-link'>
+                              <img src="assets/images/pengeluaran-icon.png">
+                            <span>Pengeluaran Inventory</span>
+                        </a>
+                        
+                    </li>
+
+                     <li class="sidebar-item  ">
+                        <a href="customer-complain.html" class='sidebar-link'>
+                              <img src="assets/images/laporan-icon.png">
+                            <span>Laporan Inventory</span>
+                        </a>
+                        
+                    </li>
+            </ul>
+        </div>
+    <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+</div>
+        </div>
+        <div id="main">
+           
+            
+<div class="main-content container-fluid">
+    <div class="page-title mb-3">
+        <h3>Dashboard</h3>
+    </div>
+    <section class="section">
+        <div class="row mb-2">
+            <div class="d-flex">
+                 <div class="col-12 col-md-3">
+                <div class="card">
+                    <div class="card-body p-0">
+                        <div class="d-flex flex-column">
+                            <div class='px-3 py-3 justify-content-between'>
+                                <p class='card-title'>Permintaan Pengeluaran <br> Produk</p>
+                                <div class="card-right align-items-center">
+                                    <p>10 </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-3">
+                <div class="card ml-3">
+                    <div class="card-body p-0">
+                        <div class="d-flex flex-column">
+                            <div class='px-3 py-3 justify-content-between'>
+                                <p class='card-title'>Permintaan Pengeluaran <br> Bahan Baku</p>
+                                <div class="card-right align-items-center">
+                                    <p>5</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-3">
+                <div class="card ml-3">
+                    <div class="card-body p-0">
+                        <div class="d-flex flex-column">
+                            <div class='px-3 py-3 justify-content-between'>
+                                <p class='card-title'>Available <br> Produk</p>
+                                <div class="card-right align-items-center">
+                                    <p>4702</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+            </div>
+           
+         
+                
+      
+              <!-- Bordered table start -->
+            <div class="row" id="table-bordered">
+            <div class="col-12">
+                <div class="card card-produk-terbaik">
+                    <div class="card-header">
+                        <h4 class="card-title">History Purchase Request</h4>
+                    </div>
+                    <div class="card-content produk-terbaik">
+                        <!-- table bordered -->
+                        <div class="table-responsive">
+                        <table class="table table-bordered mb-0">
+                            <thead>
+                            <tr class="text-center">
+                                <th>No</th>
+                                <th>Tanggal</th>
+                                <th>Kode Request</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="text-bold-500">1</td>
+                                <td>1 Maret 2021</td>
+                                <td class="text-bold-500">PUREQ-1</td>
+                            </tr>
+                            <tr>
+                                <td class="text-bold-500">2</td>
+                                <td>20 Februari 2021</td>
+                                <td class="text-bold-500">PUREQ-2</td>
+                            </tr>
+                            <tr>
+                                <td class="text-bold-500">3</td>
+                                <td>1 Februari</td>
+                                <td class="text-bold-500">PUREQ-3</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                </div>
+                </div>
+            </div>
+            <!-- </div> -->
+            <!-- Bordered table end -->
+    </section>
+        
+    </div>
+    <script src="assets/js/feather-icons/feather.min.js"></script>
+    <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    
+    <script src="assets/vendors/chartjs/Chart.min.js"></script>
+    <script src="assets/vendors/apexcharts/apexcharts.min.js"></script>
+    <script src="assets/js/pages/dashboard.js"></script>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
