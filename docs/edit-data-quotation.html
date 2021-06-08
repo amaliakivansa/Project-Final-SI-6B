@@ -118,12 +118,12 @@
 <div class="main-content container-fluid">
     <div class="page-title">
         <div class="row">
-            <div class="col-12 order-last">
-                <h3>Sales Data / Tambah Customer</h3>
+            <div class="col-12  order-last">
+                <h3>Sales Data / Edit Customer</h3>
             </div>
     </div>
     <nav class="nav master-data-tab">
-      <a class="nav-link item-tab" href="sales-inquiry.html">Sales Inquiry</a>
+      <a class="nav-link item-tab " href="sales-inquiry.html">Sales Inquiry</a>
       <a class="nav-link item-tab active" href="sales-quotation.html">Sales Quotation</a>
       <a class="nav-link item-tab" href="sales-order.html">Sales Order</a>
     </nav>
@@ -142,16 +142,16 @@
                             <div class="form-body">
                                 <div class="row">
                                 <div class="col-md-4">
-                                    <label class="form-label">Nama Customer</label>
+                                    <label class="form-label">Tanggal Order</label>
                                 </div>
                                 <div class="col-md-8 form-group">
-                                    <input type="text" id="first-name" class="form-control" name="fname" placeholder="Nama Customer">
+                                    <input type="date"  class="form-control" name="dateofbirth" id="dateofbirth">
                                 </div>
                                 <div class="col-md-4">
-                                    <label class="form-label">Email Customer</label>
+                                    <label class="form-label">Pilih Customer</label>
                                 </div>
                                 <div class="col-md-8 form-group">
-                                    <input type="email" id="email-id" class="form-control" name="email-id" placeholder="Email Customer">
+                                    <input type="email" id="email-id" class="form-control" name="email-id" placeholder="Email">
                                 </div>
                                 </div>
                             </div>
@@ -162,10 +162,10 @@
                             <div class="form-body">
                                 <div class="row">
                                 <div class="col-md-4">
-                                    <label class="form-label">No. Telp Customer</label>
+                                    <label class="form-label">Tanggal Kirim</label>
                                 </div>
                                 <div class="col-md-8 form-group">
-                                    <input type="text" id="first-name" class="form-control" name="fname" placeholder="No. Telp Customer">
+                                    <input type="date"  class="form-control" name="dateofbirth" id="dateofbirth">
                                 </div>
                                 <div class="col-md-4">
                                     <label class="form-label">No. Pesanan</label>
@@ -184,52 +184,59 @@
                     <thead>
                         <tr>
                             <th class="text-center">No</th>
-                            <th class="text-center">Nama Produk</th>
-                            <th class="text-center">No. Produk</th>
+                            <th class="text-center">Produk Jadi</th>
+                            <th class="text-center">No Produk</th>
                             <th class="text-center">Qty</th>
-                            <th class="text-center">Harga Satuan</th>
-                            <th class="text-center">Total Harga</th>
+                            <th class="text-center">Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td>Customer_1</td>
-                            <td>11973001</td>
-                            <td>7/3/2021</td>
-                            <td>2</td>
+                            <td>admin</td>
+                            <td>admin@cimory.com</td>
+                            <td>Offenburg</td>
                             <td>
-                                Rp. 800.000
+                                <div class="d-flex justify-content-center">
+                                    <button type="button" class="btn add-btn">Tambah</button>
+                                    <button type="button" class="btn btn-danger btn-delete">Hapus</button>
+                                </div>
                             </td>
                         </tr>
                         <tr>
                             <td>2</td>
                             <td>inv_management</td>
                             <td>im@cimory.com</td>
-                            <td>2</td>
-                            <td>Rp. 40.000</td>
+                            <td>New Quay</td>
                             <td>
-                                Rp. 800.000
+                                <div class="d-flex justify-content-center">
+                                    <button type="button" class="btn add-btn">Tambah</button>
+                                    <button type="button" class="btn btn-danger btn-delete">Hapus</button>
+                                </div>
                             </td>
                         </tr>
                         <tr>
                             <td>3</td>
                             <td>produksi</td>
                             <td>produksi@cimory.com</td>
-                            <td>2</td>
-                            <td>Rp. 40.000</td>
+                            <td>Grumo Appula</td>
                             <td>
-                                Rp. 800.000
+                                <div class="d-flex justify-content-center">
+                                    <button type="button" class="btn add-btn">Tambah</button>
+                                    <button type="button" class="btn btn-danger btn-delete">Hapus</button>
+                                </div>
                             </td>
                         </tr>
                         <tr>
                             <td>4</td>
                             <td>sales_market</td>
                             <td>sm@cimory.com</td>
-                            <td>2</td>
-                            <td>Rp. 40.000</td>
+                            <td>Rossignol</td>
                             <td>
-                                 Rp. 800.000
+                                  <div class="d-flex justify-content-center">
+                                    <button type="button" class="btn add-btn">Tambah</button>
+                                    <button type="button" class="btn btn-danger btn-delete">Hapus</button>
+                                </div>
                             </td>
                         </tr>
                         <tr>
@@ -237,9 +244,11 @@
                             <td>purchasing</td>
                             <td>purchasing@cimory.com</td>
                             <td>Patna</td>
-                            <td>Rp. 40.000</td>
                             <td>
-                                Rp. 800.000
+                                 <div class="d-flex justify-content-center">
+                                    <button type="button" class="btn add-btn">Tambah</button>
+                                    <button type="button" class="btn btn-danger btn-delete">Hapus</button>
+                                </div>
                             </td>
                         </tr>
                         <tr>
@@ -247,9 +256,11 @@
                             <td>hrd</td>
                             <td>hrd@cimory.com</td>
                             <td>Mold</td>
-                            <td>Rp. 40.000</td>
                             <td>
-                                Rp. 800.000
+                                 <div class="d-flex justify-content-center">
+                                    <button type="button" class="btn add-btn">Tambah</button>
+                                    <button type="button" class="btn btn-danger btn-delete">Hapus</button>
+                                </div>
                             </td>
                         </tr>
                         <tr>
@@ -257,9 +268,11 @@
                             <td>finance</td>
                             <td>finance@cimory.com</td>
                             <td>Marlborough</td>
-                            <td>Rp. 40.000</td>
                             <td>
-                                  Rp. 800.000
+                                  <div class="d-flex justify-content-center">
+                                    <button type="button" class="btn add-btn">Tambah</button>
+                                    <button type="button" class="btn btn-danger btn-delete">Hapus</button>
+                                </div>
                             </td>
                         </tr>
                         <tr>
@@ -267,9 +280,11 @@
                             <td>admin</td>
                             <td>admin@cimory.com</td>
                             <td>Offenburg</td>
-                            <td>Rp. 40.000</td>
                             <td>
-                                  Rp. 800.000
+                                  <div class="d-flex justify-content-center">
+                                    <button type="button" class="btn add-btn">Tambah</button>
+                                    <button type="button" class="btn btn-danger btn-delete">Hapus</button>
+                                </div>
                             </td>
                         </tr>
                         <tr>
@@ -277,9 +292,11 @@
                             <td>Duis.a.mi@sociisnatoquepenatibus.com</td>
                             <td>07740 599321</td>
                             <td>Karapınar</td>
-                            <td>Rp. 40.000</td>
                             <td>
-                                 Rp. 800.000
+                                  <div class="d-flex justify-content-center">
+                                    <button type="button" class="btn add-btn">Tambah</button>
+                                    <button type="button" class="btn btn-danger btn-delete">Hapus</button>
+                                </div>
                             </td>
                         </tr>
                         <tr>
@@ -287,9 +304,11 @@
                             <td>tempor.bibendum.Donec@ornarelectusante.ca</td>
                             <td>0845 46 49</td>
                             <td>Warrnambool</td>
-                            <td>Rp. 40.000</td>
                             <td>
-                                 Rp. 800.000
+                                  <div class="d-flex justify-content-center">
+                                    <button type="button" class="btn add-btn">Tambah</button>
+                                    <button type="button" class="btn btn-danger btn-delete">Hapus</button>
+                                </div>
                             </td>
                         </tr>
                         <tr>
@@ -299,7 +318,7 @@
                             <td>Bothey</td>
                             <td>
                                   <div class="d-flex justify-content-center">
-                                    <button type="button" class="btn btn-success btn-edit">Edit</button>
+                                    <button type="button" class="btn add-btn">Tambah</button>
                                     <button type="button" class="btn btn-danger btn-delete">Hapus</button>
                                 </div>
                             </td>
@@ -311,7 +330,7 @@
                             <td>Shikarpur</td>
                             <td>
                                   <div class="d-flex justify-content-center">
-                                    <button type="button" class="btn btn-success btn-edit">Edit</button>
+                                    <button type="button" class="btn add-btn">Tambah</button>
                                     <button type="button" class="btn btn-danger btn-delete">Hapus</button>
                                 </div>
                             </td>
@@ -323,7 +342,7 @@
                             <td>Assen</td>
                             <td>
                                   <div class="d-flex justify-content-center">
-                                    <button type="button" class="btn btn-success btn-edit">Edit</button>
+                                    <button type="button" class="btn add-btn">Tambah</button>
                                     <button type="button" class="btn btn-danger btn-delete">Hapus</button>
                                 </div>
                             </td>
@@ -335,7 +354,7 @@
                             <td>Hofors</td>
                             <td>
                                   <div class="d-flex justify-content-center">
-                                    <button type="button" class="btn btn-success btn-edit">Edit</button>
+                                    <button type="button" class="btn add-btn">Tambah</button>
                                     <button type="button" class="btn btn-danger btn-delete">Hapus</button>
                                 </div>
                             </td>
@@ -347,7 +366,7 @@
                             <td>Thane</td>
                             <td>
                                   <div class="d-flex justify-content-center">
-                                    <button type="button" class="btn btn-success btn-edit">Edit</button>
+                                    <button type="button" class="btn add-btn">Tambah</button>
                                     <button type="button" class="btn btn-danger btn-delete">Hapus</button>
                                 </div>
                             </td>
@@ -359,7 +378,7 @@
                             <td>Biez</td>
                             <td>
                                   <div class="d-flex justify-content-center">
-                                    <button type="button" class="btn btn-success btn-edit">Edit</button>
+                                    <button type="button" class="btn add-btn">Tambah</button>
                                     <button type="button" class="btn btn-danger btn-delete">Hapus</button>
                                 </div>
                             </td>
@@ -371,7 +390,7 @@
                             <td>Olivar</td>
                             <td>
                                   <div class="d-flex justify-content-center">
-                                    <button type="button" class="btn btn-success btn-edit">Edit</button>
+                                    <button type="button" class="btn add-btn">Tambah</button>
                                     <button type="button" class="btn btn-danger btn-delete">Hapus</button>
                                 </div>
                             </td>
@@ -383,7 +402,7 @@
                             <td>Sanquhar</td>
                             <td>
                                   <div class="d-flex justify-content-center">
-                                    <button type="button" class="btn btn-success btn-edit">Edit</button>
+                                    <button type="button" class="btn add-btn">Tambah</button>
                                     <button type="button" class="btn btn-danger btn-delete">Hapus</button>
                                 </div>
                             </td>
@@ -395,7 +414,7 @@
                             <td>Okara</td>
                             <td>
                                   <div class="d-flex justify-content-center">
-                                    <button type="button" class="btn btn-success btn-edit">Edit</button>
+                                    <button type="button" class="btn add-btn">Tambah</button>
                                     <button type="button" class="btn btn-danger btn-delete">Hapus</button>
                                 </div>
                             </td>
@@ -407,7 +426,7 @@
                             <td>La Cisterna</td>
                             <td>
                                   <div class="d-flex justify-content-center">
-                                    <button type="button" class="btn btn-success btn-edit">Edit</button>
+                                    <button type="button" class="btn add-btn">Tambah</button>
                                     <button type="button" class="btn btn-danger btn-delete">Hapus</button>
                                 </div>
                             </td>
@@ -419,7 +438,7 @@
                             <td>Rocca d'Arce</td>
                             <td>
                                   <div class="d-flex justify-content-center">
-                                    <button type="button" class="btn btn-success btn-edit">Edit</button>
+                                    <button type="button" class="btn add-btn">Tambah</button>
                                     <button type="button" class="btn btn-danger btn-delete">Hapus</button>
                                 </div>
                             </td>
@@ -431,7 +450,7 @@
                             <td>Lobbes</td>
                             <td>
                                  <div class="d-flex justify-content-center">
-                                    <button type="button" class="btn btn-success btn-edit">Edit</button>
+                                    <button type="button" class="btn add-btn">Tambah</button>
                                     <button type="button" class="btn btn-danger btn-delete">Hapus</button>
                                 </div>
                             </td>
@@ -443,7 +462,7 @@
                             <td>Sanzeno</td>
                             <td>
                                  <div class="d-flex justify-content-center">
-                                    <button type="button" class="btn btn-success btn-edit">Edit</button>
+                                    <button type="button" class="btn add-btn">Tambah</button>
                                     <button type="button" class="btn btn-danger btn-delete">Hapus</button>
                                 </div>
                             </td>
@@ -455,7 +474,7 @@
                             <td>Obaix</td>
                             <td>
                                   <div class="d-flex justify-content-center">
-                                    <button type="button" class="btn btn-success btn-edit">Edit</button>
+                                    <button type="button" class="btn add-btn">Tambah</button>
                                     <button type="button" class="btn btn-danger btn-delete">Hapus</button>
                                 </div>
                             </td>
@@ -467,7 +486,7 @@
                             <td>Saint-Remy-Geest</td>
                             <td>
                                   <div class="d-flex justify-content-center">
-                                    <button type="button" class="btn btn-success btn-edit">Edit</button>
+                                    <button type="button" class="btn add-btn">Tambah</button>
                                     <button type="button" class="btn btn-danger btn-delete">Hapus</button>
                                 </div>
                             </td>
@@ -478,7 +497,7 @@
              <div class="btn-form-inquiry">
                 <a class="btn cancel-btn" href="sales-quotation.html">Batal</a>
                 <button class="btn add-btn">Tambah</button>
-                
+               
             </div>
         </div>
 

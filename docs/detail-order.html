@@ -59,7 +59,7 @@
 
                     <li class='sidebar-title'>MANAGEMENT</li>
                       <li class="sidebar-item">
-                        <a href="data-user.html" class='sidebar-link'>
+                        <a href="table.html" class='sidebar-link'>
                              <img src="assets/images/masterdata-icon.png"> 
                             <span>Master Data</span>
                         </a>
@@ -118,14 +118,14 @@
 <div class="main-content container-fluid">
     <div class="page-title">
         <div class="row">
-            <div class="col-12 order-last">
-                <h3>Sales Data / Tambah Customer</h3>
+            <div class="col-12 col-md-6 order-md-1 order-last">
+                <h3>Sales Data / Detail</h3>
             </div>
     </div>
     <nav class="nav master-data-tab">
       <a class="nav-link item-tab" href="sales-inquiry.html">Sales Inquiry</a>
-      <a class="nav-link item-tab active" href="sales-quotation.html">Sales Quotation</a>
-      <a class="nav-link item-tab" href="sales-order.html">Sales Order</a>
+      <a class="nav-link item-tab " href="sales-quotation.html">Sales Quotation</a>
+      <a class="nav-link item-tab active" href="sales-order.html">Sales Order</a>
     </nav>
     <!-- Basic Tables start -->
 
@@ -136,160 +136,128 @@
      <section class="section">
         <div class="card">
             <div class="card-body">
-                <div class="row">
-                    <div class="col-md-6">
-                        <form class="form form-horizontal">
-                            <div class="form-body">
-                                <div class="row">
-                                <div class="col-md-4">
-                                    <label class="form-label">Nama Customer</label>
-                                </div>
-                                <div class="col-md-8 form-group">
-                                    <input type="text" id="first-name" class="form-control" name="fname" placeholder="Nama Customer">
-                                </div>
-                                <div class="col-md-4">
-                                    <label class="form-label">Email Customer</label>
-                                </div>
-                                <div class="col-md-8 form-group">
-                                    <input type="email" id="email-id" class="form-control" name="email-id" placeholder="Email Customer">
-                                </div>
-                                </div>
-                            </div>
-                        </form>
+                <span class="badge add-btn" style="float: right; clear: both; padding:10px">Kirim Ke Customer</span></h1>
+                <div class="row" style="margin-bottom: -40px; margin-top: 60px;">
+                    <div class="col-md-4">
+                          <label class="form-label">Nama Customer</label>
                     </div>
-                    <div class="col-md-6">
-                         <form class="form form-horizontal">
-                            <div class="form-body">
-                                <div class="row">
-                                <div class="col-md-4">
-                                    <label class="form-label">No. Telp Customer</label>
-                                </div>
-                                <div class="col-md-8 form-group">
-                                    <input type="text" id="first-name" class="form-control" name="fname" placeholder="No. Telp Customer">
-                                </div>
-                                <div class="col-md-4">
-                                    <label class="form-label">No. Pesanan</label>
-                                </div>
-                                <div class="col-md-8 form-group">
-                                    <input type="email" id="email-id" class="form-control" name="email-id" placeholder="No. Pesanan">
-                                </div>
-                                </div>
-                            </div>
-                        </form>
+                    <div class="col-md-4" style="margin-left: -150px; ">
+                         <input type="text" id="first-name" class="form-control" name="fname" placeholder="">
+                    </div>
+                    <div class="col-md-4 form-group">
+                       
                     </div>
                 </div>
-                <br>
-                <hr>
                 <table class='table table-striped' id="table1">
                     <thead>
                         <tr>
                             <th class="text-center">No</th>
                             <th class="text-center">Nama Produk</th>
-                            <th class="text-center">No. Produk</th>
                             <th class="text-center">Qty</th>
-                            <th class="text-center">Harga Satuan</th>
-                            <th class="text-center">Total Harga</th>
+                            <th class="text-center">Tgl. Mulai</th>
+                            <th class="text-center">Tgl. Akhir</th>
+                            <th class="text-center">Deskripsi</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td>Customer_1</td>
-                            <td>11973001</td>
+                            <td>Produk_1</td>
+                            <td>240</td>
                             <td>7/3/2021</td>
-                            <td>2</td>
+                            <td>7/4/2021</td>
                             <td>
-                                Rp. 800.000
+                               Deskripsi_1
                             </td>
                         </tr>
                         <tr>
                             <td>2</td>
-                            <td>inv_management</td>
-                            <td>im@cimory.com</td>
-                            <td>2</td>
-                            <td>Rp. 40.000</td>
+                            <td>Produk_1</td>
+                            <td>240</td>
+                            <td>7/3/2021</td>
+                            <td>7/4/2021</td>
                             <td>
-                                Rp. 800.000
+                               Deskripsi_1
                             </td>
                         </tr>
                         <tr>
                             <td>3</td>
-                            <td>produksi</td>
-                            <td>produksi@cimory.com</td>
-                            <td>2</td>
-                            <td>Rp. 40.000</td>
+                            <td>Produk_1</td>
+                            <td>240</td>
+                            <td>7/3/2021</td>
+                            <td>7/4/2021</td>
                             <td>
-                                Rp. 800.000
+                              Deskripsi_1
                             </td>
                         </tr>
                         <tr>
                             <td>4</td>
-                            <td>sales_market</td>
-                            <td>sm@cimory.com</td>
-                            <td>2</td>
-                            <td>Rp. 40.000</td>
+                            <td>Produk_1</td>
+                            <td>240</td>
+                            <td>7/3/2021</td>
+                            <td>7/4/2021</td>
                             <td>
-                                 Rp. 800.000
+                                Deskripsi_1
                             </td>
                         </tr>
                         <tr>
                             <td>5</td>
-                            <td>purchasing</td>
-                            <td>purchasing@cimory.com</td>
-                            <td>Patna</td>
-                            <td>Rp. 40.000</td>
+                            <td>Produk_1</td>
+                            <td>240</td>
+                            <td>7/3/2021</td>
+                            <td>7/4/2021</td>
                             <td>
-                                Rp. 800.000
+                               Deskripsi_1
                             </td>
                         </tr>
                         <tr>
                             <td>6</td>
-                            <td>hrd</td>
-                            <td>hrd@cimory.com</td>
-                            <td>Mold</td>
-                            <td>Rp. 40.000</td>
+                            <td>Produk_1</td>
+                            <td>240</td>
+                            <td>7/3/2021</td>
+                            <td>7/4/2021</td>
                             <td>
-                                Rp. 800.000
+                                Deskripsi_1
                             </td>
                         </tr>
                         <tr>
                             <td>7</td>
-                            <td>finance</td>
-                            <td>finance@cimory.com</td>
-                            <td>Marlborough</td>
-                            <td>Rp. 40.000</td>
+                            <td>Produk_1</td>
+                           <td>240</td>
+                            <td>7/3/2021</td>
+                            <td>7/4/2021</td>
                             <td>
-                                  Rp. 800.000
+                                 Deskripsi_1
                             </td>
                         </tr>
                         <tr>
                             <td>8</td>
-                            <td>admin</td>
-                            <td>admin@cimory.com</td>
-                            <td>Offenburg</td>
-                            <td>Rp. 40.000</td>
+                            <td>Produk_1</td>
+                            <td>240</td>
+                            <td>7/3/2021</td>
+                            <td>7/4/2021</td>
                             <td>
-                                  Rp. 800.000
+                                  Deskripsi_1
                             </td>
                         </tr>
                         <tr>
                             <td>9</td>
-                            <td>Duis.a.mi@sociisnatoquepenatibus.com</td>
-                            <td>07740 599321</td>
-                            <td>Karapınar</td>
-                            <td>Rp. 40.000</td>
+                            <td>Produk_1</td>
+                            <td>240</td>
+                            <td>7/3/2021</td>
+                            <td>7/4/2021</td>
                             <td>
-                                 Rp. 800.000
+                                 Deskripsi_1
                             </td>
                         </tr>
                         <tr>
-                            <td>10</td>
-                            <td>tempor.bibendum.Donec@ornarelectusante.ca</td>
-                            <td>0845 46 49</td>
-                            <td>Warrnambool</td>
-                            <td>Rp. 40.000</td>
+                            <td>9</td>
+                           <td>Produk_1</td>
+                            <td>240</td>
+                            <td>7/3/2021</td>
+                            <td>7/4/2021</td>
                             <td>
-                                 Rp. 800.000
+                               Deskripsi_1
                             </td>
                         </tr>
                         <tr>
@@ -474,11 +442,6 @@
                         </tr>
                     </tbody>
                 </table>
-            </div>
-             <div class="btn-form-inquiry">
-                <a class="btn cancel-btn" href="sales-quotation.html">Batal</a>
-                <button class="btn add-btn">Tambah</button>
-                
             </div>
         </div>
 

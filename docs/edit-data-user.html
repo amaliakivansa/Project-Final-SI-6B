@@ -118,13 +118,13 @@
 <div class="main-content container-fluid">
     <div class="page-title">
         <div class="row">
-            <div class="col-12 order-md-1 order-last">
-                <h3>Master Data / Tambah Pelanggan</h3>
+            <div class="col-12 col-md-6 order-md-1 order-last">
+                <h3>Master Data / Edit User</h3>
             </div>
     </div>
     <nav class="nav master-data-tab">
-      <a class="nav-link item-tab " href="data-user.html">Data User</a>
-      <a class="nav-link item-tab active" href="data-pelanggan.html">Data Pelanggan</a>
+      <a class="nav-link item-tab active" href="data-user.html">Data User</a>
+      <a class="nav-link item-tab" href="data-pelanggan.html">Data Pelanggan</a>
     </nav>
     <!-- Basic Tables start -->
 
@@ -138,29 +138,52 @@
                  <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="nama">Nama Pelanggan</label>
-                            <input type="text" class="form-control" id="nama" placeholder="Nama Pelanggan">
+                            <label for="username">Username</label>
+                            <input type="text" class="form-control" id="username" placeholder="Username">
                         </div>
 
                         <div class="form-group">
-                            <label for="email">Email Pelanggan</label>
-                            <input type="text" class="form-control" id="email"  placeholder="Email Pelanggan">
+                            <label for="email">Email</label>
+                            <input type="text" class="form-control" id="email"  placeholder="Email">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="role">Role</label>
+                                <select class="form-control" id="role">
+                                    <option>Administrator</option>
+                                    <option>Inventory Management</option>
+                                    <option>Production</option>
+                                    <option>Sales & Marketing</option>
+                                    <option>Purchasing</option>
+                                    <option>HRD</option>
+                                    <option>Finance</option>
+                                </select>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="telepon">No Telepon</label>
-                            <input type="text" class="form-control" id="telepon" placeholder="No. Telp Pelanggan">
+                            <label for="nama">Nama</label>
+                            <input type="text" class="form-control" id="nama" placeholder="Nama User">
                         </div>
 
-                         <div class="form-group">
-                            <label for="id">ID Pelanggan</label>
-                            <input type="text" class="form-control" id="id"  placeholder="ID Pelanggan">
+                        <div class="form-group">
+                            <label for="password">Kata Sandi</label>
+                            <div class="input-group" id="show_hide_password">
+                                <input type="password" class="form-control" name="password" id="password" placeholder="Kata sandi user">
+                                <i class="fas fa-eye" id="togglePassword"></i>
+                            </div>
                         </div>
-                        
+
+                        <div class="form-group">
+                            <label for="password">Ulangi Kata Sandi</label>
+                            <div class="input-group" id="show_hide_password">
+                                <input type="password" class="form-control" name="password" id="password" placeholder="Ulangi kata sandi">
+                            </div>
+                        </div>
+
                         <div class="btn-form-user">
                             <button class="btn add-btn">Tambah</button>
-                            <a class="btn cancel-btn" href="data-pelanggan.html">Batal</a>
+                            <a class="btn cancel-btn" href="data-user.html">Batal</a>
                         </div>
                     </div>
                 </div>
@@ -178,7 +201,8 @@
            
     </div>
     </div>
-    <script src="assets/js/feather-icons/feather.min.js"></script>
+     <link rel="stylesheet" href="assets/fontawesome-free-5.15.3-web/css/all.css">
+    <!-- <script src="assets/js/feather-icons/feather.min.js"></script> -->
     <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <script src="assets/js/app.js"></script>
     <script src="assets/vendors/simple-datatables/simple-datatables.js"></script>
