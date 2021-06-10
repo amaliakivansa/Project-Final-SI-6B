@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Datatable - Voler Admin Dashboard</title>
+    <title>Modul Sales & Marketing</title>
     
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
+   <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/vendors/simple-datatables/style.css">
     
-<link rel="stylesheet" href="assets/vendors/simple-datatables/style.css">
-
     <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
     <link rel="stylesheet" href="assets/css/app.css">
     <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon">
 </head>
 <body>
     <div id="app">
-        <div class="navbar">
+         <div class="navbar">
              <nav class="navbar navbar-header fixed-top navbar-expand navbar-light bg-light ml-auto">
                  <a class="navbar-brand" href="index.html"><img src="assets/images/cimory-logo.png"></a>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -40,58 +39,62 @@
             </nav>
         </div>
         <div id="sidebar" class='active'>
-            <div class="sidebar-wrapper active">
-    <!-- <div class="sidebar-header">
-        <img src="assets/images/cimory-logo.png" alt="" srcset="">
-    </div> -->
-    <div class="sidebar-menu">
-        <ul class="menu">
-                <li class="sidebar-item  ">
-                    <a href="index.html" class='sidebar-link'>
-                       <img src="assets/images/dashboard-icon.png">
-                        <span>Dashboard</span>
-                    </a>
-                    
-                </li>
-            
-            
-            
-                <li class='sidebar-title'>MANAGEMENT</li>
-
+            <div class="sidebar-wrapper active cimory-sidebary">
+        <!-- <div class="sidebar-header">
+            <img src="assets/images/cimory-logo.png" alt="" srcset="">
+        </div> -->
+        <div class="sidebar-menu">
+            <ul class="menu">
                 
-                  <li class="sidebar-item  ">
+                    <!-- <li class='sidebar-title'>Main Menu</li> -->
+                
+                    <li class="sidebar-item  ">
+                        <a href="index.html" class='sidebar-link' style="color: white;">
+                            <img src="assets/images/dashboard-icon.png">
+                            <!-- <i data-feather="home" width="20"></i>  -->
+                            <span>Dashboard</span>
+                        </a>
+                        
+                    </li>
+
+                    <li class='sidebar-title'>MANAGEMENT</li>
+
+                     <li class="sidebar-item  ">
                         <a href="data-user.html" class='sidebar-link'>
                             <img src="assets/images/masterdata-icon.png">
                             <span>Data User</span>
                         </a>
-                 </li>
+                        
+                    </li>
 
-        
-                <li class="sidebar-item active ">
-                    <a href="list-of-materials.html" class='sidebar-link'>
+                
+                
+                
+                     <li class="sidebar-item">
+                       <a href="list-of-materials.html" class='sidebar-link'>
                         <img src="assets/images/list-of-material-icon.png">
                         <span>List of Materials</span>
                     </a>
                     
-                </li>
+                    </li>
 
-                 <li class="sidebar-item">
-                    <a href="stock-bahan-baku.html" class='sidebar-link'>
+                     <li class="sidebar-item">
+                        <a href="stock-bahan-baku.html" class='sidebar-link'>
                          <img src="assets/images/data-stock-icon.png"> 
                         <span>Data Stock</span>
                     </a>
                     
-                </li>
+                     </li>
 
-                  <li class="sidebar-item  ">
-                        <a href="faktur-penjualan.html" class='sidebar-link'>
+                      <li class="sidebar-item  ">
+                        <a href="purchase-request.html" class='sidebar-link'>
                               <img src="assets/images/purchase-icon.png"> 
                             <span>Purchase Request</span>
                         </a>
                     
                     </li>
 
-                    <li class="sidebar-item  ">
+                    <li class="sidebar-item active">
                         <a href="bahan-baku.html" class='sidebar-link'>
                              <img src="assets/images/pengeluaran-icon.png"> 
                             <span>Pemasukan Inventory</span>
@@ -114,8 +117,8 @@
                         </a>
                         
                     </li>
-        </ul>
-    </div>
+            </ul>
+        </div>
     <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
 </div>
         </div>
@@ -125,59 +128,66 @@
     <div class="page-title">
         <div class="row">
             <div class="col-12 col-md-6 order-md-1 order-last">
-                <h3>List of Materials</h3>
+                <h3>Pemasukan Inventory</h3>
             </div>
     </div>
-    <section class="section">
-        <div class="card mt-3">
+    <nav class="nav master-data-tab">
+      <a class="nav-link item-tab active" href="bahan-baku.html">Bahan Baku</a>
+      <a class="nav-link item-tab " href="produk.html">Produk</a>
+    </nav>
+    <!-- Basic Tables start -->
+
+
+
+<div class="row" id="table-hover-row">
+     <section class="section">
+        <div class="card">
             <div class="card-body">
-                <div class="d-flex title-section">
-                    <div>
-                        <img src="assets/images/list-of-material-icon-2.png"/>
-                    </div>
-                    <div>
-                        <h5>List of Materials</h5>
-                     </div>
-                </div>
-               <table class='table table-striped' id="table1">
+                <a type="button" class="btn btn-outline-primary btn-tambah-pelanggan" href="tambah-pemasukan.html"><img src="assets/images/add-icon.png"/>Tambah Data</a>
+                <table class='table table-striped' id="table1">
                     <thead>
                         <tr>
                             <th class="text-center">No</th>
-                            <th class="text-center">Kode Rencana Produksi</th>
-                            <th class="text-center">Keterangan</th>
-                            <th class="text-center">Status</th>
+                            <th class="text-center">Tanggal</th>
+                            <th class="text-center">Kode Pemasukan</th>
                             <th class="text-center">Aksi</th>
-                           
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td>RP001</td>
-                            <td>Keterangan_1</td>
-                            <td>Delivered</td>
+                            <td>1 Maret 2021</td>
+                            <td>admin@cimory.com</td>
                             <td>
-                                 <a class="btn btn-success btn-edit" href="detail-list-of-material.html">Detail</a>
+                                <div class="d-flex justify-content-center">
+                                    <a type="button" href="detail-bahan-baku.html" class="btn btn-success add-btn mr-2">Detail</a>
+                                    <button type="button" class="btn btn-success btn-edit">Edit</button>
+                                    <button type="button" class="btn btn-danger btn-delete">Hapus</button>
+                                </div>
                             </td>
-                               
-                                              
                         </tr>
                         <tr>
                             <td>2</td>
-                            <td>RP002</td>
-                            <td>Keterangan_2</td>
-                            <td>Requested</td>
+                            <td>20 Februari 2021</td>
+                            <td>im@cimory.com</td>
                             <td>
-                                 <a class="btn btn-success btn-edit" href="detail-list-of-material.html">Detail</a>
+                                <div class="d-flex justify-content-center">
+                                    <a type="button" href="detail-bahan-baku.html" class="btn btn-success add-btn mr-2">Detail</a>
+                                    <button type="button" class="btn btn-success btn-edit">Edit</button>
+                                    <button type="button" class="btn btn-danger btn-delete">Hapus</button>
+                                </div>
                             </td>
                         </tr>
                         <tr>
                             <td>3</td>
-                            <td>RP003</td>
-                            <td>Keterangan_3</td>
-                            <td>Requested</td>
+                            <td>1 Februari 2021</td>
+                            <td>produksi@cimory.com</td>
                             <td>
-                                 <a class="btn btn-success btn-edit" href="detail-list-of-material.html">Detail</a>
+                                <div class="d-flex justify-content-center">
+                                    <a type="button" href="detail-bahan-baku.html" class="btn btn-success add-btn mr-2">Detail</a>
+                                    <button type="button" class="btn btn-success btn-edit">Edit</button>
+                                    <button type="button" class="btn btn-danger btn-delete">Hapus</button>
+                                </div>
                             </td>
                         </tr>
                     </tbody>
@@ -188,15 +198,19 @@
     </section>
 </div>
 
+
+</div>
+
+           
         </div>
     </div>
     <script src="assets/js/feather-icons/feather.min.js"></script>
     <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <script src="assets/js/app.js"></script>
+    <script src="assets/vendors/simple-datatables/simple-datatables.js"></script>
+    <script src="assets/js/vendors.js"></script>
+    <script src="assets/js/app.js"></script>
     
-<script src="assets/vendors/simple-datatables/simple-datatables.js"></script>
-<script src="assets/js/vendors.js"></script>
-
     <script src="assets/js/main.js"></script>
 </body>
 </html>
